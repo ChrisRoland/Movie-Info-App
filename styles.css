@@ -80,6 +80,7 @@ main {
 
 .movie img {
     width: 100%;
+    height: fit-content;
 }
 
 .movie-info {
@@ -113,6 +114,22 @@ main {
 
 .movie-info span.red {
     color: red;
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cb5d5d;
+    padding: 0 1rem;
+    font-weight: bold;
+}
+
+.date p {
+    background-color: #f9cdcd;
+    border: 2px solid #cb5d5d;
+    border-radius: 10px;
+    padding: 0 5px;
 }
 
 .overview {
