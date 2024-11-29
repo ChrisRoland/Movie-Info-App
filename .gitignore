@@ -1,0 +1,6 @@
+#Ignore Api.js
+API.js
+
+# Ignore system files
+.DS_Store
+Thumbs.db

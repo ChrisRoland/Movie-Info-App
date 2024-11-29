@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --primary-color: #692227;
+    --secondary-color: #901938;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+  
+header {
+    background-color: var(--secondary-color);
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    color: white;
+    text-shadow: 0 4px 5px #f14b4bde;
+}
+h1 span{
+    color: rgb(236, 112, 112);
+    text-shadow: 0 2px 2px #fffbfbde;
+}
+h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.search {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    padding: .5rem 1rem;
+    color: #fff;
+}
+
+.search::placeholder {
+    color: #cb5d5d;
+}
+
+.search:focus {
+    outline: none;
+    background-color: var(--primary-color);
+    transform: scale(1.03);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    background-color: var(--secondary-color);
+    width: 300px;
+    margin: 1rem;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.movie:hover {
+    transform: scale(1.05);
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin: 2px;
+}
+
+.movie-info span {
+    background-color: var(--primary-color);
+    padding: .25rem .5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie-info span.green {
+    color: #5faf0e;
+}
+
+.movie-info span.orange {
+    color: orange;
+
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+.overview {
+    background-color: #ffffffe1;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.movie:hover .overview {
+    transform: translateY(0%);
+}
+
+@media (max-width: 450px) {
+    .movie {
+        width: 150px;
+    }
+
+    h3 {
+        font-size: 0.7rem;
+    }
+
+    .movie-info span {
+        font-size: 0.7rem;
+    }
+
+    .movie-info {
+        flex-wrap: wrap;
+    }
+}
